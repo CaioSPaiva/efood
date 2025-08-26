@@ -93,13 +93,7 @@ const Checkout = () => {
         .required('O ano de vencimento é obrigatório')
         .matches(/^[0-9]{4}$/, 'O ano deve estar no formato AAAA')
     }),
-    onSubmit: (values: {
-      cardName: string
-      cardNumber: string
-      cvv: string
-      dueMonth: string
-      dueYear: string
-    }) => {
+    onSubmit: (values) => {
       purchase({
         products: [
           {

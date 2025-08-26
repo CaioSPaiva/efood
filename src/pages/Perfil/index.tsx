@@ -11,7 +11,7 @@ const Perfil = () => {
   const { id } = useParams()
 
   useEffect(() => {
-    fetch(`https://fake-api-tau.vercel.app/api/efood/restaurantes/${id}`)
+    fetch(`https://fake-api-tau.vercel.app/api/efood/${id}`)
       .then((resposta) => resposta.json())
       .then((resposta) => {
         const cardapioCorrigido: CardapioItem[] = resposta.cardapio.map(
@@ -29,13 +29,7 @@ const Perfil = () => {
 
   return (
     <>
-      {restaurante && (
-        <HeaderPerfil
-          tipo={restaurante?.tipo ?? ''}
-          titulo={restaurante?.titulo ?? ''}
-          capa={restaurante?.capa ?? ''}
-        />
-      )}
+      {restaurante && <HeaderPerfil tipo={''} titulo={''} capa={''} />}
       <FoodList />
       <Cart />
       <Footer />

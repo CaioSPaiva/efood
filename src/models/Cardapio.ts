@@ -1,4 +1,4 @@
-type Cardapio = {
+export type Cardapio = {
   id: number
   titulo: string
   destacado: boolean
@@ -17,7 +17,8 @@ type Cardapio = {
     }
   ]
 }
-export type CardapioIten = {
+
+export type CardapioItem = {
   foto: string
   preco: number
   id: number
@@ -25,4 +26,5 @@ export type CardapioIten = {
   descricao: string
   porcao: string
 }
+
 export default Cardapio

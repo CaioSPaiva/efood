@@ -9,6 +9,7 @@ export type CartItem = {
   preco: number
   quantidade: number
 }
+
 type initialState = {
   items: CardapioItem[]
   isOpen: boolean

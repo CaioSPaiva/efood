@@ -26,8 +26,8 @@ export default function FoodList() {
   const [pratoSelecionado, setPratoSelecionado] = useState<CardapioItem | null>(
     null
   )
-  // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-  const { data } = useGetRestauranteQuery(id!)
+
+  const { data } = useGetRestauranteQuery(id ?? '')
   const dispatch = useDispatch()
 
   const handleAddToCart = () => {
@@ -38,7 +38,7 @@ export default function FoodList() {
     }
   }
 
-  if (!data?.cardapio) return null
+  if (!id || !data?.cardapio) return null
 
   return (
     <Container>
