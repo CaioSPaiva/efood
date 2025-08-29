@@ -5,7 +5,7 @@ import Checkout from '../models/Checkout'
 
 const api = createApi({
   baseQuery: fetchBaseQuery({
-    baseUrl: 'https://ebac-fake-api.vercel.app/api/efood/restaurantes'
+    baseUrl: 'https://ebac-fake-api.vercel.app/api/efood'
   }),
   endpoints: (builder) => ({
     getCardapio: builder.query<Cardapio[], void>({
